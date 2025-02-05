@@ -1,4 +1,6 @@
 # Add the 2 requires you will need here
+require "rspec"
+require "../lib/student.rb"
 
 
 describe Student do
