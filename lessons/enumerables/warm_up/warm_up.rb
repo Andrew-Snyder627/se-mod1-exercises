@@ -3,12 +3,18 @@
 
 kardashians = ["kris", "kim", "kourtney", "khloe", "rob"]
 
+# your code here
 def upcase_names(names)
- # your code here
-end 
+    uppercase = []
+    names.each do |name|
+        uppercase << name.upcase
+end
+uppercase #each will return the original array if not specified like so
+end
+
+
 
 p upcase_names(kardashians)
-
 # should return ["KRIS", "KIM", "KOURTNEY", "KHLOE", "ROB"]
 
 
@@ -23,6 +29,11 @@ pets = ["Brutus", "Lucky", "Goldie", "Pepper", "Odie"]
 
 def names_ending_in_ie(names)
  # your code here
+ pet_array = []
+ names.each do |pet_name|
+    if (pet_name.end_with?("ie"))
+        pet_array << pet_name
+    end
 end 
 
 p names_ending_in_ie(pets)
