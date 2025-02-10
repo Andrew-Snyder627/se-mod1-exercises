@@ -1,4 +1,5 @@
 require './lib/hippogriff'
+require 'pry'
 
 RSpec.describe Hippogriff do
   it "has a name" do

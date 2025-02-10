@@ -5,6 +5,7 @@ require 'pry'
 # x = 10
 # puts x
 # puts y
+#error with y undefined, is this scope related?
 
 ## Example 2
 
@@ -12,6 +13,7 @@ require 'pry'
 # puts x
 # puts y
 # y = 20
+#Error, y = 20 is underneath the puts
 
 ## Example 3
 
@@ -20,7 +22,7 @@ require 'pry'
 #   puts 'Hello World!'
 # end
 # puts x
-
+#Only get 10, not calling the say_hello method
 ## Example 4
 
 # def print_variable
@@ -30,7 +32,7 @@ require 'pry'
 
 # x = 2
 # print_variable
-
+# puts 4, the x = 2 is outside of the method that is being called
 ## Example 5
 
 # def print_variable
@@ -41,7 +43,7 @@ require 'pry'
 # x = 2
 # print_variable
 # puts x
-
+#4 & 2. method is called and variable x outside of method also will print.
 ##
 
 #### ARGUMENT SCOPE
@@ -53,7 +55,7 @@ require 'pry'
 # end
 
 # print_variable(4)
-
+#prints 4
 ## Example 11
 
 # def print_variable(x)
@@ -62,7 +64,7 @@ require 'pry'
 
 # x = 4
 # print_variable(x)
-
+#4, defined variable x as 4, because the print variable is after the x = 4 it's inputting the variable?
 ## Example 12
 
 # def print_variable(x)
@@ -71,7 +73,7 @@ require 'pry'
 
 # print_variable(2)
 # puts x
-
+#Error the puts x is not defined globally
 ## Example 13
 
 # def print_variable(x)
@@ -81,3 +83,5 @@ require 'pry'
 
 # print_variable(2)
 # puts x
+
+#Same as ex 12, x is not defined outside of the method
