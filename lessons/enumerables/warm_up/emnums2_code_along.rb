@@ -71,3 +71,63 @@
 #.all? will check true or false based on the criteria, even if one is off it will return false
 #.none? & .one? will do the same thing and follow similar logic
 #.any? will return if any of the conditions are true
+
+# animals = [:dog, :cat, :zebra, :quokka, :unicorn, :bear]
+
+# animal_strings = animals.map do |animal|
+#     animals.to_s
+# end
+
+# p animal_strings
+
+# long_animals = animals.find_all do |animal|
+#     animal.to_s.length >= 4
+# end
+
+# p long_animals
+
+nested_animals = [[:dog, :cat, :zebra], [:quokka, :unicorn, :bear]]
+
+# first_array = nested_animals[0]
+# first_array_string = first_array.map do |animals|
+#     animals.to_s
+# end
+# # p first_array_string
+
+# animal_length = first_array_string.find_all do |animal|
+#     animal.length >= 4
+# end
+
+# p animal_length #Returns zebra
+
+# animal_lengths = nested_animals.flatten.map do |animal|
+#     [animal, animal.to_s.length]
+
+# end
+
+
+#Found flatten to combine & .to_h to convert to hash
+#1 
+animal_strings = nested_animals.flatten.map do |animal|
+    animal.to_s
+  end
+  
+  p animal_strings
+#2
+#   long_animals = nested_animals.flatten.find_all do |animal|
+#     animal.to_s.length >= 4
+#   end
+  
+#   p long_animals
+
+# #3 We found .to_h
+#   animal_lengths = nested_animals.flatten.map do |animal|
+#     [animal, animal.length]
+#   end
+  
+#   p animal_lengths.to_h #We found using .to_h at the end of end, why does this work?
+
+#flat_map good to look into
+#look into the enumerable documentation
+#Do this without .flatten and without .to_h
+
