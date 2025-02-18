@@ -2,6 +2,25 @@
 # and returns an array of all names upcased.
 
 kardashians = ["kris", "kim", "kourtney", "khloe", "rob"]
+#find Kris
+kris = kardashians.find {|name| name == "Kris"}
+#upcased names
+upcased_names = kardashians.map {|name| name.upcase}
+#or
+upcase_names = kardashians.map do |name|
+    name.upcase
+end
+p upcase_names
+
+#Instead of shovelling into an empty array, .map will do it itself an map over each value
+#3 or more letters
+long_names = kardashians.find_all {|name| name.length >= 3}
+
+#or
+
+long_names = kardashians.find_all do |name|
+    name.length >= 3
+end
 
 # your code here
 def upcase_names(names)
